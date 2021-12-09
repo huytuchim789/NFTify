@@ -1,0 +1,17 @@
+.content {
+  height: 90vh;
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-top: 80px;
+    height: 100%;
+    .intro__img {
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background-color: #edf2ff;
+      float: right;
+      margin: auto;
+    }
+  }
+}
