@@ -129,3 +129,14 @@
     }
   }
 }
+@media screen and (max-width: 600px) {
+  .content {
+    .intro {
+      grid-template-columns: 1fr;
+      padding-top: 64px;
+      .intro__img {
+        width: 100%;
+      }
+    }
+  }
+}

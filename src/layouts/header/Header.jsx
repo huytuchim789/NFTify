@@ -1,16 +1,16 @@
-import React from 'react'
-import { Divider, Button } from 'antd'
-import Link from 'next/link'
-import styles from './Header.module.scss'
+import React from 'react';
+import { Divider, Button } from 'antd';
+import Link from 'next/link';
+import styles from './Header.module.scss';
 const Header = () => {
   return (
-    <div className={`${styles.header} header flex px-40 py-7 justify-between`}>
-      <div className="logo flex justify-center items-center	">
+    <div className={`${styles.header} header flex  py-7 justify-between`}>
+      <div className={`'${styles.logo} flex justify-center items-center`}>
         <img src="./img/Frame.svg" className="block mr-2"></img>
         <img src="./img/Group.svg" className="block"></img>
       </div>
       <div
-        className="btn-group flex justify-between items-center"
+        className={`${styles['btn-group']} flex justify-between items-center`}
         style={{ width: '40%' }}
       >
         <Link href="/">Features</Link>
@@ -32,8 +32,9 @@ const Header = () => {
           Register
         </Button>
       </div>
+      <img src="./img/navbar.svg" className={`${styles['toggle-btn']}`} />
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

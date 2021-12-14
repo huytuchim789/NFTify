@@ -1,12 +1,11 @@
-import Content from './../components/Content/Content'
-import Header from '../layouts/header/Header'
-import Footer from '../layouts/footer/Footer'
-export default function Home() {
-  return (
-    <div className="">
-      <Header />
-      <Content />
-      <Footer />
-    </div>
-  )
-}
+import React from 'react';
+// import PropTypes from 'prop-types';
+// import { HomePage } from '../components/Homepage/HomePage';
+
+const Home = () => {
+  return <div></div>;
+};
+
+Home.propTypes = {};
+
+export default Home;

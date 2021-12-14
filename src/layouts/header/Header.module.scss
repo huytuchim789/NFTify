@@ -2,6 +2,8 @@
   font-weight: 600;
   font-size: 14px;
   border-bottom: 1px solid #e6e8ec;
+  padding-left: 160px;
+  padding-right: 160px;
   a {
     color: #777e90 !important;
     white-space: nowrap !important;
@@ -9,4 +11,25 @@
   a:hover {
     color: #ff0a6c !important;
   }
+  .toggle-btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header {
+    .btn-group {
+      display: none;
+    }
+    padding-left: 32px;
+    padding-right: 32px;
+    .toggle-btn {
+      display: block;
+      float: right;
+    }
+  }
+
+  // .logo a.icon {
+  //   float: right;
+  //   display: block;
+  // }
 }

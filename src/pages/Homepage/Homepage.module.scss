@@ -1,0 +1,27 @@
+.homepage {
+  .modal__header {
+    font-weight: 600;
+    font-size: 28px;
+    // line-height: 42px;
+    text-align: center;
+    // color: #23262f;
+    color: red;
+    margin-bottom: 12px;
+  }
+  .modal__subheader {
+    font-size: 16px;
+    line-height: 26px;
+    /* identical to box height, or 160% */
+    width: 428px;
+    text-align: center;
+    color: #4f5566;
+    margin-bottom: 32px;
+  }
+  .modal__content {
+    display: flex;
+    align-items: center;
+  }
+  .ant-modal-content {
+    border-radius: 20px !important;
+  }
+}
