@@ -1,9 +1,10 @@
 .header {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 14px;
   border-bottom: 1px solid #e6e8ec;
   a {
     color: #777e90 !important;
+    white-space: nowrap !important;
   }
   a:hover {
     color: #ff0a6c !important;

@@ -1,10 +1,10 @@
-import React from 'react';
-import { Divider, Button } from 'antd';
-import Link from 'next/link';
-import styles from './Header.module.scss';
+import React from 'react'
+import { Divider, Button } from 'antd'
+import Link from 'next/link'
+import styles from './Header.module.scss'
 const Header = () => {
   return (
-    <div className={`${styles.header} header flex px-40 py-6 justify-between`}>
+    <div className={`${styles.header} header flex px-40 py-7 justify-between`}>
       <div className="logo flex justify-center items-center	">
         <img src="./img/Frame.svg" className="block mr-2"></img>
         <img src="./img/Group.svg" className="block"></img>
@@ -26,13 +26,14 @@ const Header = () => {
             color: 'white',
             width: '102px',
             height: '40px',
+            fontWeight: '600',
           }}
         >
           Register
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

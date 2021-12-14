@@ -1,8 +1,12 @@
 .content {
-  height: 90vh;
+  font-family: Poppins;
+  input {
+    outline: none;
+  }
   .intro {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 70px;
     padding-top: 80px;
     height: 100%;
     .intro__img {
@@ -12,6 +16,116 @@
       background-color: #edf2ff;
       float: right;
       margin: auto;
+    }
+  }
+  .logo {
+    font-size: 20px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  .solutions {
+    font-size: 28px;
+    background: #f8f8fb;
+    padding-bottom: 68px;
+    .solutions__header {
+      font-weight: 600;
+      font-size: 1em;
+      text-align: center;
+      padding-right: 560px;
+      padding-left: 560px;
+      padding-top: 66px;
+      color: #23262f;
+      line-height: 42px;
+    }
+    .solutions__content {
+      display: grid;
+      grid-template-columns: repeat(3, 299px);
+      padding-left: 160px;
+      padding-right: 160px;
+      text-align: center;
+      justify-content: center;
+      grid-column-gap: 90px;
+      row-gap: 68px;
+    }
+  }
+  .instruction {
+    font-size: 28px;
+    height: 880px;
+    position: relative;
+    margin-bottom: 109px;
+    .instruction__header {
+      font-weight: 600;
+      font-size: 1em;
+      text-align: center;
+      padding-right: 446px;
+      padding-left: 446px;
+      padding-top: 80px;
+      color: #23262f;
+      line-height: 42px;
+      margin-bottom: 24px;
+    }
+    .instruction__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 64px;
+      padding-right: 160px;
+      padding-left: 160px;
+    }
+  }
+  .trial {
+    background: #edf2ff;
+    height: 304px;
+    padding: 66px 482px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .trial__header {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 42px;
+      text-align: center;
+      color: #23262f;
+      margin-bottom: 12px;
+    }
+    .trial__subheader {
+      font-size: 16px;
+      line-height: 26px;
+      /* identical to box height, or 160% */
+
+      text-align: center;
+      color: #4f5566;
+      margin-bottom: 32px;
+    }
+  }
+  .mail {
+    height: 304px;
+    padding: 66px 482px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e6e8ec;
+    .mail__header {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 42px;
+      text-align: center;
+      color: #23262f;
+      margin-bottom: 12px;
+    }
+    .mail__subheader {
+      font-size: 16px;
+      line-height: 26px;
+      /* identical to box height, or 160% */
+      width: 428px;
+      text-align: center;
+      color: #4f5566;
+      margin-bottom: 32px;
+    }
+    .mail__content {
+      display: flex;
+      align-items: center;
     }
   }
 }
