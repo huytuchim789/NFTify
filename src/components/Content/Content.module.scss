@@ -160,7 +160,7 @@
       display: none;
     }
   }
-  .show {
+  .instruction__content--mobile {
     display: none;
   }
   .trial {
@@ -217,6 +217,18 @@
     .mail__content {
       display: flex;
       align-items: center;
+      .mail__subcribe {
+        background: linear-gradient(135deg, #ff0a6c -16.8%, #2d27ff 138.64%);
+        border-radius: 30px;
+        color: white;
+        padding: 12px 3px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 117px;
+        height: 44px;
+      }
     }
   }
 }
@@ -307,12 +319,41 @@
         line-height: 26px;
         color: #23262f;
         .instruction__content {
-          grid-template-columns: 1fr;
+          display: none;
         }
       }
+      .img__big {
+        zoom: 65%;
+        position: absolute;
+        top: -20%;
+        left: 10%;
+      }
+      .img__small {
+        zoom: 65%;
+        top: 80px;
+        left: 45%;
+        z-index: 1;
+        position: absolute;
+      }
+      .instruction__content--mobile {
+        display: block;
+      }
     }
-    .show {
-      display: block;
+    .trial {
+      width: 100%;
+      padding: 44px 32px 0;
+    }
+    .mail {
+      width: 100%;
+      padding: 44px 32px 63px;
+      .mail__content {
+        flex-direction: column;
+        .mail__subcribe {
+          flex-grow: 1;
+          width: 100%;
+          margin-top: 11px;
+        }
+      }
     }
   }
 

@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import styles from './Content.module.scss'
-import { Button, Tabs, Select } from 'antd'
-const { Option } = Select
-const { TabPane } = Tabs
+import React, { useState } from 'react';
+import styles from './Content.module.scss';
+import { Button, Tabs, Select } from 'antd';
+const { Option } = Select;
+const { TabPane } = Tabs;
 const Content = () => {
-  const [option, setOption] = useState('1')
+  const [option, setOption] = useState('1');
   const handleChange = (value) => {
-    setOption(value)
-  }
+    setOption(value);
+  };
   const solutions = [
     {
       img: '/img/solutions/Vector1.svg',
@@ -44,7 +44,7 @@ const Content = () => {
       content:
         "Customize and unlimitedly extend functions via Community's plugins.\n\nThousand plugins available to customize the flow for business need adaption.",
     },
-  ]
+  ];
   const instructions = [
     {
       content: 'Step 1: Click Register to create your FREE account',
@@ -59,7 +59,7 @@ const Content = () => {
     {
       content: 'Step 4: Create your Store and connect wallet to your Store',
     },
-  ]
+  ];
   return (
     <div className={`${styles.content}`}>
       {/**Intro */}
@@ -169,7 +169,7 @@ const Content = () => {
                   {solution.content}
                 </span>
               </div>
-            )
+            );
           })}
           <Button className={`${styles.solutions__btn}`} style={{}}>
             <span style={{ marginRight: '5px' }} className="text-xl">
@@ -270,20 +270,19 @@ const Content = () => {
           <Option value="4">04 Sell NFT</Option>
         </Select>
         {option === '1' ? (
-          <div className={`${styles.instruction__content} ${styles.show}`}>
-            <div>
-              <div
-                style={{
-                  height: '335px',
-                  width: '544px',
-                  backgroundColor: '#EDF2FF',
-                  position: 'relative',
-                  borderRadius: '16px',
-                  zoom: '140%',
-                }}
-              >
-                {' '}
-              </div>
+          <div className={`${styles['instruction__content--mobile']}`}>
+            <div
+              style={{
+                height: '230px',
+                width: 'auto',
+                backgroundColor: '#EDF2FF',
+                position: 'relative',
+                borderRadius: '16px',
+                // zoom: '140%',
+                margin: '44px -32px 78px -32px',
+                zIndex: '1',
+              }}
+            >
               <img
                 className={styles.img__big}
                 src="./img/instructions/big.svg"
@@ -295,11 +294,12 @@ const Content = () => {
                 // style={{}}
               />
             </div>
-            <div style={{ marginLeft: '130px', marginTop: '140px' }}>
+
+            <div style={{ marginTop: '130px' }}>
               <h6
                 style={{
                   fontWeight: '600',
-                  fontSize: '28px',
+                  fontSize: '22px',
                   marginBottom: '25px',
                 }}
               >
@@ -317,7 +317,13 @@ const Content = () => {
                         marginRight: '14px',
                       }}
                     ></img>
-                    <span style={{ fontWeight: '400', lineHeight: '30px' }}>
+                    <span
+                      style={{
+                        fontWeight: '400',
+                        lineHeight: '30px',
+                        fontSize: '16px',
+                      }}
+                    >
                       {instruction.content}
                     </span>
                   </li>
@@ -328,6 +334,7 @@ const Content = () => {
                   textAlign: 'center',
                   textDecoration: 'underline',
                   color: '#FF0A6C',
+                  fontSize: '16px',
                 }}
                 href="#"
               >
@@ -383,27 +390,13 @@ const Content = () => {
               marginRight: '12px',
             }}
           ></input>
-          <Button
-            style={{
-              background:
-                ' linear-gradient(135deg, #FF0A6C -16.8%, #2D27FF 138.64%)',
-              borderRadius: '30px',
-              color: 'white',
-              padding: '12px 3px',
-              fontWeight: '600',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              width: '117px',
-              height: '44px',
-            }}
-          >
+          <Button className={styles.mail__subcribe} style={{}}>
             <span>Subscribe</span>
           </Button>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Content
+export default Content;
