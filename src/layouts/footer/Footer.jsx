@@ -1,16 +1,13 @@
-import React from 'react';
+import React from 'react'
 // import PropTypes from 'prop-types'
-import { MailOutlined } from '@ant-design/icons';
-import styles from './Footer.module.scss';
-import Link from 'next/link';
+import { MailOutlined } from '@ant-design/icons'
+import styles from './Footer.module.scss'
+import Link from 'next/link'
 const Footer = () => {
   return (
     <div className={`${styles.Footer}`}>
-      <div style={{ paddingLeft: '160px' }}>
-        <div
-          className="logo flex items-center"
-          style={{ marginBottom: '12px' }}
-        >
+      <div className={`${styles.Footer__logo} ${styles['column-center']}`}>
+        <div className={`flex items-center`} style={{ marginBottom: '12px' }}>
           <img src="./img/Frame.svg" className="block mr-2"></img>
           <img src="./img/Group.svg" className="block"></img>
         </div>
@@ -25,7 +22,7 @@ const Footer = () => {
           <img src="/img/icons/5.svg" />
         </div>
       </div>
-      <div>
+      <div className={styles['column-center']}>
         <p className={`${styles.Footer__header}`}>About</p>
         <Link href="/">
           <span className={`${styles.Footer__content}`}>About Us</span>
@@ -37,7 +34,7 @@ const Footer = () => {
           <span className={`${styles.Footer__content}`}>Privacy Policy</span>
         </Link>
       </div>
-      <div>
+      <div className={styles['column-center']}>
         <p className={`${styles.Footer__header}`}>SUPPORT</p>
         <Link href="/">
           <span className={`${styles.Footer__content}`}>Create Store</span>
@@ -52,7 +49,7 @@ const Footer = () => {
           <span className={`${styles.Footer__content}`}>Help Center</span>
         </Link>
       </div>
-      <div>
+      <div className={styles['column-center']}>
         <p className={`${styles.Footer__header}`}>NFTIFY NETWORK</p>
         <Link href="/">
           <span className={`${styles.Footer__content}`}>NFTify Project</span>
@@ -63,9 +60,9 @@ const Footer = () => {
           </span>
         </Link>
       </div>
-      <div>
+      <div className={styles['column-center']}>
         <p className={`${styles.Footer__header}`}>CONTACT US</p>
-        <div className="flex items-center justify-center">
+        <div className={styles.Footer__content__contact}>
           <MailOutlined
             style={{
               marginRight: '8.5px',
@@ -81,22 +78,17 @@ const Footer = () => {
         </div>
       </div>
       <span
+        className={styles.copyright}
         style={{
-          display: 'block',
-          textAlign: 'center',
-          fontWeight: ' 500',
-          fontSize: '14px',
-          lineHeight: ' 21px',
-          gridColumn: '1/6',
-          marginBottom: '16px',
+         
         }}
       >
         © Copyright NFTify Network. All Rights Reserved.
       </span>
     </div>
-  );
-};
+  )
+}
 
-Footer.propTypes = {};
+Footer.propTypes = {}
 
-export default Footer;
+export default Footer
