@@ -1,7 +1,8 @@
-import React from 'react';
-import { Divider, Button } from 'antd';
-import Link from 'next/link';
-import styles from './Header.module.scss';
+import React from 'react'
+import { Divider, Button } from 'antd'
+import Link from 'next/link'
+import styles from './Header.module.scss'
+console.log(styles)
 const Header = () => {
   return (
     <div className={`${styles.header} header flex  py-7 justify-between`}>
@@ -34,7 +35,7 @@ const Header = () => {
       </div>
       <img src="./img/navbar.svg" className={`${styles['toggle-btn']}`} />
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

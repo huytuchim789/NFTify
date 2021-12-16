@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Content.module.scss'
-import { Button, Tabs } from 'antd'
-
+import { Button, Tabs, Select } from 'antd'
+const { Option } = Select
 const { TabPane } = Tabs
 const Content = () => {
+  const [option, setOption] = useState('1')
+  const handleChange = (value) => {
+    setOption(value)
+  }
   const solutions = [
     {
       img: '/img/solutions/Vector1.svg',
@@ -59,8 +63,8 @@ const Content = () => {
   return (
     <div className={`${styles.content}`}>
       {/**Intro */}
-      <div className={`${styles.intro} px-40 mb-28`}>
-        <div className="intro__text mt-40">
+      <div className={`${styles.intro} mb-28`}>
+        <div className={`${styles.intro__text}`}>
           <h3 className="font-semibold text-5xl">
             Anyone can start NFT business with NFTify
           </h3>
@@ -99,54 +103,30 @@ const Content = () => {
           </Button>
         </div>
         <div className={`${styles.intro__img} relative`}>
-          <img
-            src="./img/intro/intro1.svg"
-            style={{
-              zoom: '160%',
-              position: 'absolute',
-              zIndex: '1',
-              top: '10%',
-              left: '40%',
-            }}
-          />
-          <img
-            src="./img/intro/intro2.svg"
-            style={{ zoom: '140%', position: 'absolute', bottom: '0' }}
-          />
+          <img src="./img/intro/intro1.svg" className={styles.img__1} />
+          <img src="./img/intro/intro2.svg" className={styles.img__2} />
           <img
             src="./img/intro/intro3.svg"
-            style={{
-              zoom: '150%',
-              position: 'absolute',
-              zIndex: '1',
-              top: '20%',
-              right: '75%',
-            }}
+            className={styles.img__3}
+            style={{}}
           />
         </div>
       </div>
       {/**Logo*/}
-      <div
-        className={`${styles.logo}`}
-        style={{
-          backgroundColor: ' #E9EEFC',
-          height: '70px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-evenly',
-        }}
-      >
-        <span style={{ fontWeight: 'bold', fontSize: '1em' }}>Powered By</span>
-        <img src="./img/cooporations/co2.svg" />
-        <div className="flex">
+      <div className={`${styles.logo}`} style={{}}>
+        <span className={styles.power} style={{}}>
+          Powered By
+        </span>
+        <img className={styles.item} src="./img/cooporations/co2.svg" />
+        <div className={styles.item} style={{ display: 'flex' }}>
           <img
             src="./img/cooporations/co3-1.svg"
             className="inline-block mr-2"
           ></img>
           <img src="./img/cooporations/co3-2.svg"></img>
         </div>
-        <img src="./img/cooporations/co4.svg" />
-        <img src="./img/cooporations/co5.svg" />
+        <img className={styles.item} src="./img/cooporations/co4.svg" />
+        <img className={styles.item} src="./img/cooporations/co5.svg" />
       </div>
       {/**Solution*/}
       <div className={`${styles.solutions}`}>
@@ -191,22 +171,7 @@ const Content = () => {
               </div>
             )
           })}
-          <Button
-            style={{
-              background:
-                ' linear-gradient(135deg, #FF0A6C -16.8%, #2D27FF 138.64%)',
-              borderRadius: '30px',
-              color: 'white',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: '17px 25px',
-              width: '282px',
-              height: '60px',
-              gridArea: '3/2/3/2',
-              fontWeight: '600',
-            }}
-          >
+          <Button className={`${styles.solutions__btn}`} style={{}}>
             <span style={{ marginRight: '5px' }} className="text-xl">
               Create a FREE account
             </span>
@@ -219,6 +184,7 @@ const Content = () => {
           defaultActiveKey="1"
           centered
           style={{ fontWeight: '600', color: '#23262F' }}
+          className={styles.instruction__tab}
         >
           <TabPane
             tab="01 Create Store"
@@ -235,30 +201,18 @@ const Content = () => {
                   borderRadius: '16px',
                   zoom: '140%',
                 }}
-              ></div>
+              >
+                {' '}
+              </div>
               <img
+                className={styles.img__big}
                 src="./img/instructions/big.svg"
-                style={{
-                  width: '412px',
-                  height: '480.47px',
-                  position: 'absolute',
-                  left: '190px',
-                  top: '250px',
-                  zIndex: '1',
-                  zoom: '130%',
-                }}
+                // style={{}}
               />
               <img
+                className={styles.img__small}
                 src="./img/instructions/small.svg"
-                style={{
-                  width: '272.4px',
-                  height: '282.8px',
-                  position: 'absolute',
-                  top: '350px',
-                  left: '400px',
-                  zIndex: '2',
-                  zoom: '130%',
-                }}
+                // style={{}}
               />
             </div>
             <div style={{ marginLeft: '130px', marginTop: '140px' }}>
@@ -305,6 +259,83 @@ const Content = () => {
           <TabPane tab="03 Create NFT" key="3"></TabPane>
           <TabPane tab="04 Sell NFT" key="4"></TabPane>
         </Tabs>
+        <Select
+          defaultValue="1"
+          className={styles.instruction__select}
+          onChange={handleChange}
+        >
+          <Option value="1">01 Create Store</Option>
+          <Option value="2">02 Customize Store</Option>
+          <Option value="3">03 Create NFT</Option>
+          <Option value="4">04 Sell NFT</Option>
+        </Select>
+        {option === '1' ? (
+          <div className={`${styles.instruction__content} ${styles.show}`}>
+            <div>
+              <div
+                style={{
+                  height: '335px',
+                  width: '544px',
+                  backgroundColor: '#EDF2FF',
+                  position: 'relative',
+                  borderRadius: '16px',
+                  zoom: '140%',
+                }}
+              >
+                {' '}
+              </div>
+              <img
+                className={styles.img__big}
+                src="./img/instructions/big.svg"
+                // style={{}}
+              />
+              <img
+                className={styles.img__small}
+                src="./img/instructions/small.svg"
+                // style={{}}
+              />
+            </div>
+            <div style={{ marginLeft: '130px', marginTop: '140px' }}>
+              <h6
+                style={{
+                  fontWeight: '600',
+                  fontSize: '28px',
+                  marginBottom: '25px',
+                }}
+              >
+                Step 1: Create Store Account
+              </h6>
+              <ul style={{ maxWidth: '410px' }}>
+                {instructions.map((instruction) => (
+                  <li>
+                    <img
+                      src="./img/free.svg"
+                      className="inline-block"
+                      style={{
+                        width: '16px',
+                        backgroundColor: '#4F5566',
+                        marginRight: '14px',
+                      }}
+                    ></img>
+                    <span style={{ fontWeight: '400', lineHeight: '30px' }}>
+                      {instruction.content}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                style={{
+                  textAlign: 'center',
+                  textDecoration: 'underline',
+                  color: '#FF0A6C',
+                }}
+                href="#"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+        ) : null}
       </div>
       <div className={`${styles.trial}`}>
         <h6 className={`${styles.trial__header}`}>

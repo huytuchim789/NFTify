@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import Content from './../../components/Content/Content';
-import Header from '../../layouts/header/Header';
-import Footer from '../../layouts/footer/Footer';
-import { Modal, Button } from 'antd';
-import styles from './Homepage.module.scss';
+import React, { useState, useEffect } from 'react'
+import Content from './../../components/Content/Content'
+import Header from '../../layouts/header/Header'
+import Footer from '../../layouts/footer/Footer'
+import { Modal, Button } from 'antd'
+import styles from './Homepage.module.scss'
 export default function HomePage() {
-  const [isModalVisible, setIsModalVisible] = useState(true);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
   const handleCancel = () => {
-    setIsModalVisible(false);
-  };
+    setIsModalVisible(false)
+  }
   useEffect(() => {
     const appearModal = setTimeout(() => {
-      setIsModalVisible(true);
-    }, 5000);
+      setIsModalVisible(true)
+    }, 5000)
     return () => {
-      clearTimeout(appearModal);
-    };
-  }, []);
+      clearTimeout(appearModal)
+    }
+  }, [])
   return (
-    <div className={styles.homepage}>
+    <div className={`${styles.homepage}`}>
       <Header />
       <Content />
       <Footer />
@@ -120,7 +120,7 @@ export default function HomePage() {
                   height: '44px',
                 }}
                 onClick={() => {
-                  setIsSuccess(true);
+                  setIsSuccess(true)
                 }}
               >
                 <span>Subscribe</span>
@@ -135,5 +135,5 @@ export default function HomePage() {
           }`}
       </style>
     </div>
-  );
+  )
 }
