@@ -9,10 +9,19 @@
     grid-column-gap: 70px;
     padding-top: 80px;
     height: 100%;
-    padding-left: 160px;
-    padding-right: 160px;
+
     .intro__text {
       margin-top: 160px;
+      padding-left: 160px;
+      padding-right: 160px;
+      .intro__header {
+        font-size: 48px;
+        font-weight: 600;
+      }
+      .intro__content {
+        display: inline-block;
+        font-size: 16px;
+      }
     }
     .intro__img {
       width: 800px;
@@ -21,8 +30,9 @@
       background-color: #edf2ff;
       float: right;
       margin: auto;
+
       .img__1 {
-        zoom: 160%;
+        transform: scale(1.6);
 
         position: absolute;
         z-index: 1;
@@ -30,29 +40,33 @@
         // height: 150px;
         // left: 757px;
         // top: 372px;
-        top: 20%;
+        top: 15%;
         left: 50%;
+        overflow: hidden;
       }
       .img__2 {
-        zoom: 140%;
+        transform: scale(1.4);
         position: absolute;
         bottom: 0;
         // width: 372.86px;
         // height: 527.49px;
         // left: 793px;
         // top: 167.98px;
-        top: -10%;
-        right: 5%;
+        top: 10%;
+        right: 25%;
+        overflow: hidden;
       }
       .img__3 {
-        zoom: 150%;
+        transform: scale(2);
         position: absolute;
         z-index: 1;
         top: 30%;
+        left: 10%;
         // width: 296px;
         // height: 197px;
         // left: 984px;
         // top: 292px;
+        overflow: hidden;
       }
     }
   }
@@ -139,19 +153,24 @@
           width: 412px;
           height: 480.47px;
           position: absolute;
-          left: 120px;
-          top: 150px;
+          left: 250px;
+          top: 400px;
           z-index: 1;
-          zoom: 150%;
+          transform: scale(1.5);
         }
         .img__small {
           width: 272.4px;
           height: 282.8px;
           position: absolute;
-          top: 250px;
-          left: 350px;
+          top: 450px;
+          left: 500px;
           z-index: 2;
-          zoom: 150%;
+          transform: scale(1.5);
+        }
+
+        .instruction__step--desktop {
+          padding-left: 160px;
+          padding-right: 160px;
         }
       }
     }
@@ -162,6 +181,10 @@
   }
   .instruction__content--mobile {
     display: none;
+    .instruction__step--mobile {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
   }
   .trial {
     background: #edf2ff;
@@ -209,7 +232,7 @@
       font-size: 16px;
       line-height: 26px;
       /* identical to box height, or 160% */
-      width: 428px;
+      width: 100%;
       text-align: center;
       color: #4f5566;
       margin-bottom: 32px;
@@ -229,6 +252,15 @@
         width: 117px;
         height: 44px;
       }
+      .mail__input {
+        border: 2px solid #e6e8ec;
+        box-sizing: border-box;
+        border-radius: 30px;
+        width: 319px;
+        padding: 13px 0 13px 16px;
+        height: 44px;
+        margin-right: 12px;
+      }
     }
   }
 }
@@ -236,23 +268,39 @@
   .content {
     .intro {
       grid-template-columns: 1fr;
-      padding-top: 64px;
-      padding-left: 32px;
-      padding-right: 32px;
+      padding-top: 0;
+      margin-bottom: 0;
+
       .intro__text {
+        margin-top: 64px;
         margin-bottom: 73px;
+        padding-left: 32px;
+        padding-right: 32px;
+        font-size: 28px;
+        .intro__header {
+          font-size: 28px;
+        }
+        .intro__content {
+          margin-bottom: 40px;
+        }
       }
       .intro__img {
         // width: 100%;
         width: 375px;
         height: 375px;
-        margin-bottom: 73px;
+        margin-bottom: 0px;
         .img__1 {
-          zoom: 70%;
+          transform: scale(0.6);
+          left: 25%;
+        }
+        .img__2 {
+          transform: scale(0.7);
+          top: -20%;
+          right: 0;
         }
         .img__3 {
-          zoom: 80%;
-          right: 70%;
+          transform: scale(0.8);
+          left: 0;
           top: 30%;
         }
       }
@@ -276,6 +324,9 @@
         height: 44px;
         border-radius: 8px;
         padding: 8px 26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
     .solutions {
@@ -296,8 +347,6 @@
       }
     }
     .instruction {
-      padding-right: 32px;
-      padding-left: 32px;
       .instruction__header {
         padding-left: 0;
         padding-right: 0;
@@ -305,6 +354,13 @@
       .instruction__tab {
         display: none;
       }
+      .instruction__content {
+        .instruction__step {
+          padding-left: 32px;
+          padding-right: 32px;
+        }
+      }
+
       .instruction__select {
         display: block;
         background: #ffffff;
@@ -323,15 +379,15 @@
         }
       }
       .img__big {
-        zoom: 65%;
+        transform: scale(0.7);
         position: absolute;
-        top: -20%;
-        left: 10%;
+        top: -45%;
+        left: -10%;
       }
       .img__small {
-        zoom: 65%;
-        top: 80px;
-        left: 45%;
+        transform: scale(0.6);
+        top: -30px;
+        left: 24%;
         z-index: 1;
         position: absolute;
       }
@@ -352,6 +408,9 @@
           flex-grow: 1;
           width: 100%;
           margin-top: 11px;
+        }
+        .mail__input {
+          margin-right: 0;
         }
       }
     }

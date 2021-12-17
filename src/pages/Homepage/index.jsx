@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react'
-import Content from './../../components/Content/Content'
-import Header from '../../layouts/header/Header'
-import Footer from '../../layouts/footer/Footer'
-import { Modal, Button } from 'antd'
-import styles from './Homepage.module.scss'
+import React, { useState, useEffect } from 'react';
+import Content from './../../components/Content/Content';
+import Header from '../../layouts/header/Header';
+import Footer from '../../layouts/footer/Footer';
+import { Modal, Button } from 'antd';
+import styles from './Homepage.module.scss';
 export default function HomePage() {
-  const [isModalVisible, setIsModalVisible] = useState(false)
-  const [isSuccess, setIsSuccess] = useState(false)
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const handleCancel = () => {
-    setIsModalVisible(false)
-  }
+    setIsModalVisible(false);
+  };
   useEffect(() => {
     const appearModal = setTimeout(() => {
-      setIsModalVisible(true)
-    }, 5000)
+      setIsModalVisible(true);
+    }, 5000);
     return () => {
-      clearTimeout(appearModal)
-    }
-  }, [])
+      clearTimeout(appearModal);
+    };
+  }, []);
   return (
     <div className={`${styles.homepage}`}>
       <Header />
@@ -50,7 +50,7 @@ export default function HomePage() {
               style={{
                 fontSize: '16px',
                 lineHeight: '26px',
-                width: '428px',
+                width: '100%',
                 textAlign: 'center',
                 color: '#4f5566',
                 marginBottom: '32px',
@@ -81,7 +81,7 @@ export default function HomePage() {
               style={{
                 fontSize: '16px',
                 lineHeight: '26px',
-                width: '428px',
+                width: '100%',
                 textAlign: 'center',
                 color: '#4f5566',
                 marginBottom: '32px',
@@ -92,7 +92,7 @@ export default function HomePage() {
             </p>
             <div className={`${styles.modal__content} flex items-center`}>
               <input
-                className="mail__input"
+                className={styles.modal__input}
                 type="text"
                 placeholder="Enter your email"
                 style={{
@@ -106,6 +106,7 @@ export default function HomePage() {
                 }}
               ></input>
               <Button
+                className={styles.modal__subcribe}
                 style={{
                   background:
                     ' linear-gradient(135deg, #FF0A6C -16.8%, #2D27FF 138.64%)',
@@ -120,7 +121,7 @@ export default function HomePage() {
                   height: '44px',
                 }}
                 onClick={() => {
-                  setIsSuccess(true)
+                  setIsSuccess(true);
                 }}
               >
                 <span>Subscribe</span>
@@ -132,8 +133,12 @@ export default function HomePage() {
       <style>
         {`.ant-modal-content {
             border-radius: 20px !important;
-          }`}
+          }@media screen and (max-width: 600px) {
+  .modal__subcribe {
+    width: 115px ;
+  }
+}`}
       </style>
     </div>
-  )
+  );
 }

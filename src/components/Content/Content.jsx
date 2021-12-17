@@ -65,11 +65,11 @@ const Content = () => {
       {/**Intro */}
       <div className={`${styles.intro} mb-28`}>
         <div className={`${styles.intro__text}`}>
-          <h3 className="font-semibold text-5xl">
+          <h3 className={styles.intro__header}>
             Anyone can start NFT business with NFTify
           </h3>
           <span
-            className="inline-block "
+            className={styles.intro__content}
             style={{ color: '#4F5566', marginBottom: '40px' }}
           >
             Try NFTify FREE to build your own NFT store without coding and with
@@ -103,10 +103,10 @@ const Content = () => {
           </Button>
         </div>
         <div className={`${styles.intro__img} relative`}>
-          <img src="./img/intro/intro1.svg" className={styles.img__1} />
-          <img src="./img/intro/intro2.svg" className={styles.img__2} />
+          <img src="./img/intro/intro1.png" className={styles.img__1} />
+          <img src="./img/intro/intro2.png" className={styles.img__2} />
           <img
-            src="./img/intro/intro3.svg"
+            src="./img/intro/intro3.png"
             className={styles.img__3}
             style={{}}
           />
@@ -279,7 +279,7 @@ const Content = () => {
                 position: 'relative',
                 borderRadius: '16px',
                 // zoom: '140%',
-                margin: '44px -32px 78px -32px',
+                margin: '44px 0 78px 0px',
                 zIndex: '1',
               }}
             >
@@ -295,7 +295,7 @@ const Content = () => {
               />
             </div>
 
-            <div style={{ marginTop: '130px' }}>
+            <div className={styles['instruction__step--mobile']}>
               <h6
                 style={{
                   fontWeight: '600',
@@ -377,18 +377,10 @@ const Content = () => {
         </p>
         <div className={`${styles.mail__content}`}>
           <input
-            className="mail__input"
+            className={`${styles.mail__input}`}
             type="text"
             placeholder="Enter your email"
-            style={{
-              border: '2px solid #E6E8EC',
-              boxSizing: 'border-box',
-              borderRadius: '30px',
-              width: '319px',
-              padding: '13px 0 13px 16px',
-              height: '44px',
-              marginRight: '12px',
-            }}
+            style={{}}
           ></input>
           <Button className={styles.mail__subcribe} style={{}}>
             <span>Subscribe</span>
