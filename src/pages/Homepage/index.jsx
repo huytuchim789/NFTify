@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import Content from './../../components/Content/Content';
-import Header from '../../layouts/header/Header';
-import Footer from '../../layouts/footer/Footer';
-import { Modal, Button } from 'antd';
-import styles from './Homepage.module.scss';
+import React, { useState, useEffect } from 'react'
+import Content from './../../components/Content/Content'
+import Header from '../../layouts/header/Header'
+import Footer from '../../layouts/footer/Footer'
+import { Modal, Button } from 'antd'
+import styles from './Homepage.module.scss'
 export default function HomePage() {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
   const handleCancel = () => {
-    setIsModalVisible(false);
-  };
+    setIsModalVisible(false)
+  }
   useEffect(() => {
     const appearModal = setTimeout(() => {
-      setIsModalVisible(true);
-    }, 5000);
+      setIsModalVisible(true)
+    }, 5000)
     return () => {
-      clearTimeout(appearModal);
-    };
-  }, []);
+      clearTimeout(appearModal)
+    }
+  }, [])
   return (
     <div className={`${styles.homepage}`}>
       <Header />
@@ -34,27 +34,27 @@ export default function HomePage() {
             <img src="./img/subcribe/funny.svg" />
             <h6
               className={`${styles.mail__header}`}
-              style={{
-                fontWeight: '600',
-                fontSize: '28px',
-                lineHeight: '42px',
-                textAlign: 'center',
-                color: '#23262f',
-                marginBottom: '12px',
-              }}
+              // style={{
+              //   fontWeight: '600',
+              //   fontSize: '28px',
+              //   lineHeight: '42px',
+              //   textAlign: 'center',
+              //   color: '#23262f',
+              //   marginBottom: '12px',
+              // }}
             >
               Thanks!!!
             </h6>
             <p
               className={`${styles.modal__subheader}`}
-              style={{
-                fontSize: '16px',
-                lineHeight: '26px',
-                width: '100%',
-                textAlign: 'center',
-                color: '#4f5566',
-                marginBottom: '32px',
-              }}
+              // style={{
+              //   fontSize: '16px',
+              //   lineHeight: '26px',
+              //   width: '100%',
+              //   textAlign: 'center',
+              //   color: '#4f5566',
+              //   marginBottom: '32px',
+              // }}
             >
               Please check your email inbox or spam folder. We’ve sent you a
               link to verify your email.
@@ -65,27 +65,27 @@ export default function HomePage() {
             <img src="./img/subcribe/bell.svg" />
             <h6
               className={`${styles.mail__header}`}
-              style={{
-                fontWeight: '600',
-                fontSize: '28px',
-                lineHeight: '42px',
-                textAlign: 'center',
-                color: '#23262f',
-                marginBottom: '12px',
-              }}
+              // style={{
+              //   fontWeight: '600',
+              //   fontSize: '28px',
+              //   lineHeight: '42px',
+              //   textAlign: 'center',
+              //   color: '#23262f',
+              //   marginBottom: '12px',
+              // }}
             >
               Join our weekly digest!
             </h6>
             <p
               className={`${styles.modal__subheader}`}
-              style={{
-                fontSize: '16px',
-                lineHeight: '26px',
-                width: '100%',
-                textAlign: 'center',
-                color: '#4f5566',
-                marginBottom: '32px',
-              }}
+              // style={{
+              //   fontSize: '16px',
+              //   lineHeight: '26px',
+              //   width: '100%',
+              //   textAlign: 'center',
+              //   color: '#4f5566',
+              //   marginBottom: '32px',
+              // }}
             >
               Be the first to know about our platform updates & exclusive
               promotions.
@@ -95,33 +95,33 @@ export default function HomePage() {
                 className={styles.modal__input}
                 type="text"
                 placeholder="Enter your email"
-                style={{
-                  border: '2px solid #E6E8EC',
-                  boxSizing: 'border-box',
-                  borderRadius: '30px',
-                  width: '319px',
-                  padding: '13px 0 13px 16px',
-                  height: '44px',
-                  marginRight: '12px',
-                }}
+                // style={{
+                //   border: '2px solid #E6E8EC',
+                //   boxSizing: 'border-box',
+                //   borderRadius: '30px',
+                //   width: '319px',
+                //   padding: '13px 0 13px 16px',
+                //   height: '44px',
+                //   marginRight: '12px',
+                // }}
               ></input>
               <Button
                 className={styles.modal__subcribe}
-                style={{
-                  background:
-                    ' linear-gradient(135deg, #FF0A6C -16.8%, #2D27FF 138.64%)',
-                  borderRadius: '30px',
-                  color: 'white',
-                  padding: '12px 3px',
-                  fontWeight: '600',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  width: '117px',
-                  height: '44px',
-                }}
+                // style={{
+                //   background:
+                //     ' linear-gradient(135deg, #FF0A6C -16.8%, #2D27FF 138.64%)',
+                //   borderRadius: '30px',
+                //   color: 'white',
+                //   padding: '12px 3px',
+                //   fontWeight: '600',
+                //   display: 'flex',
+                //   justifyContent: 'center',
+                //   alignItems: 'center',
+                //   width: '117px',
+                //   height: '44px',
+                // }}
                 onClick={() => {
-                  setIsSuccess(true);
+                  setIsSuccess(true)
                 }}
               >
                 <span>Subscribe</span>
@@ -133,12 +133,9 @@ export default function HomePage() {
       <style>
         {`.ant-modal-content {
             border-radius: 20px !important;
-          }@media screen and (max-width: 600px) {
-  .modal__subcribe {
-    width: 115px ;
-  }
-}`}
+          }
+        `}
       </style>
     </div>
-  );
+  )
 }

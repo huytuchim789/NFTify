@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import styles from './Content.module.scss';
-import { Button, Tabs, Select } from 'antd';
-const { Option } = Select;
-const { TabPane } = Tabs;
+import React, { useState } from 'react'
+import styles from './Content.module.scss'
+import { Button, Tabs, Select } from 'antd'
+const { Option } = Select
+const { TabPane } = Tabs
 const Content = () => {
-  const [option, setOption] = useState('1');
+  const [option, setOption] = useState('1')
   const handleChange = (value) => {
-    setOption(value);
-  };
+    setOption(value)
+  }
   const solutions = [
     {
       img: '/img/solutions/Vector1.svg',
@@ -44,7 +44,7 @@ const Content = () => {
       content:
         "Customize and unlimitedly extend functions via Community's plugins.\n\nThousand plugins available to customize the flow for business need adaption.",
     },
-  ];
+  ]
   const instructions = [
     {
       content: 'Step 1: Click Register to create your FREE account',
@@ -59,7 +59,7 @@ const Content = () => {
     {
       content: 'Step 4: Create your Store and connect wallet to your Store',
     },
-  ];
+  ]
   return (
     <div className={`${styles.content}`}>
       {/**Intro */}
@@ -169,7 +169,7 @@ const Content = () => {
                   {solution.content}
                 </span>
               </div>
-            );
+            )
           })}
           <Button className={`${styles.solutions__btn}`} style={{}}>
             <span style={{ marginRight: '5px' }} className="text-xl">
@@ -259,30 +259,19 @@ const Content = () => {
           <TabPane tab="03 Create NFT" key="3"></TabPane>
           <TabPane tab="04 Sell NFT" key="4"></TabPane>
         </Tabs>
-        <Select
+        <select
           defaultValue="1"
           className={styles.instruction__select}
-          onChange={handleChange}
+          onChange={(e) => handleChange(e.target.value)}
         >
-          <Option value="1">01 Create Store</Option>
-          <Option value="2">02 Customize Store</Option>
-          <Option value="3">03 Create NFT</Option>
-          <Option value="4">04 Sell NFT</Option>
-        </Select>
+          <option value="1">01 Create Store</option>
+          <option value="2">02 Customize Store</option>
+          <option value="3">03 Create NFT</option>
+          <option value="4">04 Sell NFT</option>
+        </select>
         {option === '1' ? (
           <div className={`${styles['instruction__content--mobile']}`}>
-            <div
-              style={{
-                height: '230px',
-                width: 'auto',
-                backgroundColor: '#EDF2FF',
-                position: 'relative',
-                borderRadius: '16px',
-                // zoom: '140%',
-                margin: '44px 0 78px 0px',
-                zIndex: '1',
-              }}
-            >
+            <div className={styles.img__container}>
               <img
                 className={styles.img__big}
                 src="./img/instructions/big.svg"
@@ -296,16 +285,10 @@ const Content = () => {
             </div>
 
             <div className={styles['instruction__step--mobile']}>
-              <h6
-                style={{
-                  fontWeight: '600',
-                  fontSize: '22px',
-                  marginBottom: '25px',
-                }}
-              >
+              <h6 className={styles['instruction__step--mobile__header']}>
                 Step 1: Create Store Account
               </h6>
-              <ul style={{ maxWidth: '410px' }}>
+              <ul className={styles.instruction__step__content}>
                 {instructions.map((instruction) => (
                   <li>
                     <img
@@ -388,7 +371,7 @@ const Content = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Content;
+export default Content

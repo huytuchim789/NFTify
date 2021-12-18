@@ -27,9 +27,17 @@
       float: right;
     }
   }
-
-  // .logo a.icon {
-  //   float: right;
-  //   display: block;
-  // }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .header {
+    .btn-group {
+      display: none;
+    }
+    padding-left: 32px;
+    padding-right: 32px;
+    .toggle-btn {
+      display: block;
+      float: right;
+    }
+  }
 }

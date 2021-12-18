@@ -1,51 +1,60 @@
 .homepage {
   width: 100%;
   // overflow: hidden;
-  .modal__header {
-    font-weight: 600;
-    font-size: 28px;
-    // line-height: 42px;
-    text-align: center;
-    // color: #23262f;
-    color: red;
-    margin-bottom: 12px;
-  }
-  .modal__subheader {
-    font-size: 16px;
-    line-height: 26px;
-    /* identical to box height; or 160% */
-    width: 428px;
-    text-align: center;
-    color: #4f5566;
-    margin-bottom: 32px;
-  }
-  .modal__content {
-    display: flex;
-    align-items: center;
-  }
-  .modal__input {
-    border: 2px solid #e6e8ec;
-    box-sizing: border-box;
-    border-radius: 30px;
-    width: 319px;
-    padding: 13px 0 13px 16px;
-    height: 44px;
-    margin-right: 12px;
-  }
-  .modal__subcribe {
-    background: linear-gradient(135deg, #ff0a6c -16.8%, #2d27ff 138.64%);
-    border-radius: 30px;
-    color: white;
-    padding: 12px 3px;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 117px;
-    height: 44px;
-  }
-  .ant-modal-content {
-    border-radius: 20px !important;
-  }
 }
 
+.modal__header {
+  font-weight: 600;
+  font-size: 28px;
+  // line-height: 42px;
+  text-align: center;
+  // color: #23262f;
+  color: red;
+  margin-bottom: 12px;
+}
+.modal__subheader {
+  font-size: 16px;
+  line-height: 26px;
+  /* identical to box height; or 160% */
+  width: 100%;
+  text-align: center;
+  color: #4f5566;
+  margin-bottom: 32px;
+}
+.modal__content {
+  display: flex;
+  align-items: center;
+}
+.modal__input {
+  border: 2px solid #e6e8ec;
+  box-sizing: border-box;
+  border-radius: 30px;
+  width: 319px;
+  padding: 13px 0 13px 16px;
+  height: 44px;
+  margin-right: 12px;
+}
+
+.ant-modal-content {
+  border-radius: 20px !important;
+}
+.modal__subcribe {
+  background: linear-gradient(135deg, #ff0a6c -16.8%, #2d27ff 138.64%);
+  border-radius: 30px;
+  color: white;
+  padding: 12px 3px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 117px;
+  height: 44px;
+}
+.ant-modal-content {
+  border-radius: 20px !important;
+}
+@media screen and (max-width: 600px) {
+  .modal__input {
+    width: 230px;
+  }
+}
