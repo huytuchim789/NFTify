@@ -31,9 +31,9 @@ export default function HomePage() {
       >
         {isSuccess ? (
           <div className="flex flex-col justify-center align items-center">
-            <img src="./img/subcribe/funny.svg" />
+            <img className={styles.bell} src="./img/subcribe/funny.svg" />
             <h6
-              className={`${styles.mail__header}`}
+              className={`${styles.modal__header}`}
               // style={{
               //   fontWeight: '600',
               //   fontSize: '28px',
@@ -62,9 +62,9 @@ export default function HomePage() {
           </div>
         ) : (
           <div className="flex flex-col justify-center align items-center">
-            <img src="./img/subcribe/bell.svg" />
+            <img className={styles.bell} src="./img/subcribe/bell.svg" />
             <h6
-              className={`${styles.mail__header}`}
+              className={`${styles.modal__header}`}
               // style={{
               //   fontWeight: '600',
               //   fontSize: '28px',
